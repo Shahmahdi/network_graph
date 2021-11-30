@@ -4,7 +4,8 @@ import boxIcon from "../resources/box.svg";
 
 // graph payload
 const data = {
-  nodes: [{ id: "Harry", svg: boxIcon, labelPosition: "top" }, { id: "Sally", symbolType: "square" }, { id: "Alice" }],
+  nodes: [{ id: "Harry", svg: boxIcon, labelPosition: "top", x : 400,
+  y : 400  }, { id: "Sally", symbolType: "square" }, { id: "Alice" }],
   links: [
     { source: "Harry", target: "Sally", color: "blue", strokeDasharray: 5 },
     { source: "Harry", target: "Alice" },
@@ -15,8 +16,8 @@ const data = {
 const myConfig = {
   nodeHighlightBehavior: true,
   automaticRearrangeAfterDropNode: true,
-  // width: 800,
-  // height: 400,
+  width: 800,
+  height: 800,
   maxZoom: 8,
   minZoom: 0.1,
   // collapsible: true,
@@ -42,7 +43,7 @@ const myConfig = {
     labelProperty: (source, target) => (`Fiber - 150m - (-10db)`)
   },
   d3: {
-    gravity: "-200",
+    gravity: "-400",
     linkLength: "200",
   },
   // freezeAllDragEvents: false,
@@ -50,10 +51,77 @@ const myConfig = {
   // highlightDegree: 1,
   panAndZoom: true,
   focusZoom: 1,
-  // staticGraphWithDragAndDrop: true,
+  staticGraphWithDragAndDrop: true,
   // staticGraph: true,
   directed: true
 };
+
+// const myConfig = {
+//   "automaticRearrangeAfterDropNode": false,
+//   "collapsible": false,
+//   "directed": false,
+//   "focusAnimationDuration": 0.75,
+//   "focusZoom": 1,
+//   "freezeAllDragEvents": false,
+//   "height": 400,
+//   "highlightDegree": 1,
+//   "highlightOpacity": 1,
+//   "linkHighlightBehavior": true,
+//   "maxZoom": 8,
+//   "minZoom": 0.1,
+//   "nodeHighlightBehavior": true,
+//   "panAndZoom": false,
+//   "staticGraph": false,
+//   "staticGraphWithDragAndDrop": true,
+//   "width": 800,
+//   "d3": {
+//     "alphaTarget": 0.05,
+//     "gravity": -400,
+//     "linkLength": 180,
+//     "linkStrength": 1,
+//     "disableLinkForce": true
+//   },
+//   "node": {
+//     "color": "#d3d3d3",
+//     "fontColor": "black",
+//     "fontSize": 12,
+//     "fontWeight": "normal",
+//     "highlightColor": "SAME",
+//     "highlightFontSize": 12,
+//     "highlightFontWeight": "bold",
+//     "highlightStrokeColor": "blue",
+//     "highlightStrokeWidth": "SAME",
+//     "labelProperty": "name",
+//     "mouseCursor": "pointer",
+//     "opacity": 1,
+//     "renderLabel": true,
+//     "size": 500,
+//     "strokeColor": "none",
+//     "strokeWidth": 2,
+//     "svg": "",
+//     "symbolType": "circle"
+//   },
+//   "link": {
+//     "color": "#d3d3d3",
+//     "fontColor": "black",
+//     "fontSize": 12,
+//     "fontWeight": "normal",
+//     "highlightColor": "blue",
+//     "highlightFontSize": 8,
+//     "highlightFontWeight": "bold",
+//     "labelProperty": "label",
+//     "mouseCursor": "pointer",
+//     "opacity": 1,
+//     "renderLabel": true,
+//     "semanticStrokeWidth": true,
+//     "strokeWidth": 1.5,
+//     "markerHeight": 6,
+//     "markerWidth": 6,
+//     "strokeDasharray": 0,
+//     "strokeDashoffset": 0,
+//     "strokeLinecap": "butt"
+//   }
+// };
 
 // const myConfig = {
 //   nodeHighlightBehavior: true,
