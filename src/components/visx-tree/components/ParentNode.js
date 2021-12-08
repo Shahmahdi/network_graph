@@ -1,6 +1,6 @@
-import React from 'react';
-import { Group } from '@visx/group';
-import { background, blue, white } from '../configs';
+import React from "react";
+import { Group } from "@visx/group";
+import { boxTypeColor, boxType } from "../Data";
 
 export const ParentNode = ({ node }) => {
   const width = 40;
@@ -8,32 +8,47 @@ export const ParentNode = ({ node }) => {
   const centerX = -width / 2;
   const centerY = -height / 2;
 
+  const getBgColor = () => {
+    if (node.data.boxType === boxType.tg) {
+      return boxTypeColor.tg;
+    } else if (node.data.boxType === boxType.box) {
+      return boxTypeColor.box;
+    } else if (node.data.boxType === boxType.tgBoxWithSplitter) {
+      return boxTypeColor.tgBoxWithSplitter;
+    } else if (node.data.boxType === boxType.userHome) {
+      return boxTypeColor.userHome;
+    } else {
+      return "white";
+    }
+  };
+
   return (
     <Group top={node.x} left={node.y}>
-      <rect
-        height={height}
-        width={width}
-        y={centerY}
-        x={centerX}
-        // fill={background}
-        fill={node.data.boxType === "tg" ? "#58cae9" : "lightgreen"}
-        stroke={blue}
-        strokeWidth={1}
-        onClick={() => {
-          alert(`clicked: ${JSON.stringify(node.data.name)}`);
-        }}
-      />
-      {/* {console.log(`parent node: `, node)} */}
-      <text
-        dy=".33em"
+      <foreignObject
         fontSize={9}
-        fontFamily="Arial"
-        textAnchor="middle"
-        style={{ pointerEvents: 'none' }}
-        fill={white}
-      >
-        {node.data.name}
-      </text>
+        x={centerX}
+        y={centerY}
+        width='50'
+        height='100%'>
+        <defs>
+          <filter x='0' y='0' width='1' height='1' id={`solid_${node.data.id}`}>
+            <feFlood floodColor={getBgColor()} result='bg' />
+            <feMerge>
+              <feMergeNode in='bg' />
+              <feMergeNode in='SourceGraphic' />
+            </feMerge>
+          </filter>
+        </defs>
+        <text
+          filter={`url(#solid_${node.data.id})`}
+          fontSize={9}
+          fontFamily='Arial'
+          textAnchor='left'
+          style={{ backgroundColor: getBgColor() }}
+        >
+          {node.data.name}
+        </text>
+      </foreignObject>
     </Group>
   );
 };
