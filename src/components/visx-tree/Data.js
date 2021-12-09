@@ -440,7 +440,7 @@ export const cafeData = {
                       children: [
                         {
                           id: "71_east_raza_bazar_city_hostel",
-                          name: "62 east raza bazar (City hostel)",
+                          name: "71 east raza bazar (City hostel)",
                           cableType: cableTypes.fiber,
                           fiberCores: 4,
                           fiberConnectionUpMedium: fiberConnectionUpMediums.mc,
