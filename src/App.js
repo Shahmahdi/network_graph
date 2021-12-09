@@ -8,8 +8,8 @@ function App() {
     <div>
       {/* <GraphReactD3 /> */}
       <NetworkTree
-        width={800}
-        height={800}
+        width={2000}
+        height={2000}
       />
     </div>
   );

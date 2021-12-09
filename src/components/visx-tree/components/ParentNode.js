@@ -6,7 +6,7 @@ export const ParentNode = ({ node }) => {
   const width = 40;
   const height = 20;
   const centerX = -width / 2;
-  const centerY = -height / 2;
+  const centerY = -height / 2 + 5;
 
   const getBgColor = () => {
     if (node.data.boxType === boxType.tg) {
@@ -28,7 +28,7 @@ export const ParentNode = ({ node }) => {
         fontSize={9}
         x={centerX}
         y={centerY}
-        width='50'
+        width='80'
         height='100%'>
         <defs>
           <filter x='0' y='0' width='1' height='1' id={`solid_${node.data.id}`}>

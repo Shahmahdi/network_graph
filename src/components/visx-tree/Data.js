@@ -277,7 +277,211 @@ export const cafeData = {
                 {},
                 {}
               ]
-            }
+            },
+            {
+              id: "52_4_east_raza_bazar_splitter",
+              name: "52/4 east raza bazar_splitter",
+              cableType: cableTypes.fiber,
+              fiberCores: 4,
+              boxType: boxType.tgBoxWithSplitter,
+              children: [
+                {
+                  id: "52_4_east_raza_bazar",
+                  name: "52/4 east raza bazar",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 4,
+                  fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                  boxType: boxType.box
+                },
+                {
+                  id: "salam",
+                  name: "salam",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 2,
+                  fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                  boxType: boxType.userHome
+                },
+                {
+                  id: "sohel52_4",
+                  name: "sohel52/4",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 4,
+                  fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                  boxType: boxType.userHome
+                },
+                {
+                  id: "jabir52_9",
+                  name: "jabir52/9",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 2,
+                  fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                  boxType: boxType.userHome
+                },
+                {
+                  id: "93_1_east_raza_bazar",
+                  name: "93/1 east raza bazar",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 4,
+                  fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                  boxType: boxType.box,
+                  children: [
+                    {
+                      id: "91_east_raza_bazar_metro",
+                      name: "91 east raza bazar (Metro)",
+                      cableType: cableTypes.cat5,
+                      boxType: boxType.box,
+                    }
+                  ]
+                },
+                {
+                  id: "MCT_splitter",
+                  name: "MCT_splitter",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 4,
+                  boxType: boxType.tgBoxWithSplitter,
+                  children: [
+                    {
+                      id: "Dot_Computer",
+                      name: "Dot Computer",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.box,
+                      children: [
+                        {
+                          id: "147_shelteck",
+                          name: "147 shelteck",
+                          cableType: cableTypes.cat5,
+                          boxType: boxType.box,
+                        }
+                      ]
+                    },
+                    {
+                      id: "mahbub147",
+                      name: "mahbub147",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 2,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.userHome
+                    },
+                    {
+                      id: "dr_kabir_e3",
+                      name: "dr.kabir.e3",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.userHome
+                    },
+                    {
+                      id: "reza",
+                      name: "reza",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 2,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.userHome
+                    },
+                    {
+                      id: "mct",
+                      name: "MCT",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.box,
+                      children: [
+                        {
+                          id: "147_I_green_road",
+                          name: "147/I Green Road",
+                          cableType: cableTypes.cat5,
+                          boxType: boxType.box,
+                        },
+                        {
+                          id: "57_1_green_road",
+                          name: "57/1 Green Road",
+                          cableType: cableTypes.cat5,
+                          boxType: boxType.box,
+                        }
+                      ]
+                    },
+                    {},
+                    {},
+                    {}
+                  ]
+                },
+                {
+                  id: "84_east_raza_bazar_splitter",
+                  name: "84 east raza bazar splitter",
+                  cableType: cableTypes.fiber,
+                  fiberCores: 4,
+                  boxType: boxType.tgBoxWithSplitter,
+                  children: [
+                    {
+                      id: "34_b_east_raza_bazar",
+                      name: "34/b east raza bazar",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.box
+                    },
+                    {
+                      id: "azad",
+                      name: "azad",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 2,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.userHome
+                    },
+                    {
+                      id: "62_east_raza_bazar",
+                      name: "62 east raza bazar",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.box,
+                      children: [
+                        {
+                          id: "71_east_raza_bazar_city_hostel",
+                          name: "62 east raza bazar (City hostel)",
+                          cableType: cableTypes.fiber,
+                          fiberCores: 4,
+                          fiberConnectionUpMedium: fiberConnectionUpMediums.mc,
+                          boxType: boxType.box
+                        }
+                      ]
+                    },
+                    {
+                      id: "84_east_raza_bazar",
+                      name: "84 east raza bazar",
+                      cableType: cableTypes.fiber,
+                      fiberCores: 4,
+                      fiberConnectionUpMedium: fiberConnectionUpMediums.onu,
+                      boxType: boxType.box,
+                      children: [
+                        {
+                          id: "117_east_raza_bazar",
+                          name: "117 east raza bazar",
+                          cableType: cableTypes.cat5,
+                          boxType: boxType.box,
+                          children: [
+                            {
+                              id: "148_east_raza_bazar",
+                              name: "148 east raza bazar",
+                              cableType: cableTypes.cat5,
+                              boxType: boxType.box,
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {},
+                    {},
+                    {},
+                    {}
+                  ]
+                },
+                {}
+              ]
+            },
+            {}
           ]
         }
       ]

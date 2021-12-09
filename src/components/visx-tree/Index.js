@@ -109,7 +109,7 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
                                 />
                                 <text
                                   fill={linkTextColor(link)}
-                                  x={target.y - 60}
+                                  x={target.y - 80}
                                   y={target.x - 5}
                                   dy='0.2em'
                                   fontSize={10}

@@ -10,7 +10,7 @@ export const Node = ({ node }) => {
   const width = 40;
   const height = 20;
   const centerX = -width / 2;
-  const centerY = -height / 2;
+  const centerY = -height / 2 + 5;
 
   if (isRoot) {
     return <RootNode node={node} />;
@@ -40,7 +40,7 @@ export const Node = ({ node }) => {
           fontSize={9}
           x={centerX}
           y={centerY}
-          width='50'
+          width='80'
           height='100%'>
           <defs>
             <filter
