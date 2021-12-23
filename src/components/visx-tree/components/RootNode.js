@@ -14,7 +14,7 @@ export const RootNode = ({ node }) => {
         y={centerY}
         width='50'
         height='100%'>
-        <defs>
+        {/* <defs>
           <filter x='0' y='0' width='1' height='1' id={`solid_${node.data.id}`}>
             <feFlood floodColor="#8aff0a" result='bg' />
             <feMerge>
@@ -22,8 +22,9 @@ export const RootNode = ({ node }) => {
               <feMergeNode in='SourceGraphic' />
             </feMerge>
           </filter>
-        </defs>
+        </defs> */}
         <text
+          is="x3d"
           filter={`url(#solid_${node.data.id})`}
           fontSize={9}
           fontFamily='Arial'

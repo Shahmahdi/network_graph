@@ -42,7 +42,7 @@ export const Node = ({ node }) => {
           y={centerY}
           width='80'
           height='100%'>
-          <defs>
+          {/* <defs>
             <filter
               x='0'
               y='0'
@@ -55,8 +55,9 @@ export const Node = ({ node }) => {
                 <feMergeNode in='SourceGraphic' />
               </feMerge>
             </filter>
-          </defs>
+          </defs> */}
           <text
+            is="x3d"
             filter={`url(#solid_${node.data.id})`}
             fontSize={9}
             fontFamily='Arial'

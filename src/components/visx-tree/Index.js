@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { Tree, hierarchy } from "@visx/hierarchy";
 import {
-  cafeData,
+  // cafeData,
   boxType,
   cableTypes,
   fiberConnectionUpMediums,
@@ -21,8 +21,8 @@ import { localPoint } from "@visx/event";
 //   margin?: { top: number; right: number; bottom: number; left: number };
 // };
 
-export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
-  const data = useMemo(() => hierarchy(cafeData), []);
+export const NetworkTree = ({ width, height, margin = defaultMargin, networkData }) => {
+  const data = useMemo(() => hierarchy(networkData), [networkData]);
   // const [showMiniMap, setShowMiniMap] = useState(true);
   const yMax = height - margin.top - margin.bottom;
   const xMax = width - margin.left - margin.right;
@@ -61,15 +61,17 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
   };
 
   return width < 10 ? null : (
-    <>
+    <div>
       <Zoom
         width={width}
         height={height}
-        scaleXMin={1 / 2}
+        scaleXMin={1 / 4}
         scaleXMax={4}
-        scaleYMin={1 / 2}
+        scaleYMin={1 / 4}
         scaleYMax={4}
-        initialTransformMatrix={initialTransform}>
+        initialTransformMatrix={initialTransform}
+        component="div"
+      >
         {(zoom) => (
           <div className='relative'>
             <svg
@@ -108,6 +110,7 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
                                   }
                                 />
                                 <text
+                                  is="x3d"
                                   fill={linkTextColor(link)}
                                   x={target.y - 80}
                                   y={target.x - 5}
@@ -132,6 +135,7 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
                                   }
                                 />
                                 <text
+                                  is="x3d"
                                   fill={linkTextColor(link)}
                                   textAnchor='middle'
                                   x={midY}
@@ -303,7 +307,7 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
           </div>
         )}
       </Zoom>
-      <style jsx>{`
+      <style>{`
         .btn {
           margin: 0;
           text-align: center;
@@ -349,6 +353,6 @@ export const NetworkTree = ({ width, height, margin = defaultMargin }) => {
           position: relative;
         }
       `}</style>
-    </>
+    </div>
   );
 };

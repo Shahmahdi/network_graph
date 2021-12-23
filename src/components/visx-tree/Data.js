@@ -89,7 +89,44 @@ export const rawData = {
   ]
 };
 
+export const CafeDataTree = [
+  {
+    id: "Router (Green Road Branch (NOC))",
+    name: "Router (Green Road Branch (NOC))",
+    parent: null
+  },
+  {
+    id: "143_mim_monjil_Inside_Office",
+    name: "143 mim monjil (Inside Office)",
+    cableType: cableTypes.cat5,
+    boxType: boxType.box,
+    routerPort: 5,
+    parent: "Router (Green Road Branch (NOC))"
+  },
+  {
+    id: "BWDB_Haor",
+    name: "BWDB Haor",
+    cableType: cableTypes.fiber,
+    fiberCores: 4,
+    fiberConnectionUpMedium: fiberConnectionUpMediums.mc,
+    boxType: boxType.box,
+    routerPort: 1,
+    parent: "Router (Green Road Branch (NOC))"
+  },
+  {
+    id: "Ambagan",
+    name: "Ambagan",
+    cableType: cableTypes.fiber,
+    fiberCores: 4,
+    fiberConnectionUpMedium: fiberConnectionUpMediums.mc,
+    boxType: boxType.box,
+    routerPort: 4,
+    parent: "BWDB_Haor"
+  }
+];
+
 export const cafeData = {
+  id: "Router (Green Road Branch (NOC))",
   name: "Router (Green Road Branch (NOC))",
   children: [
     {
@@ -106,7 +143,8 @@ export const cafeData = {
       fiberCores: 4,
       fiberConnectionUpMedium: fiberConnectionUpMediums.mc,
       boxType: boxType.box,
-      routerPort: 1
+      routerPort: 1,
+      children: []
     },
     {
       id: "Ambagan",
