@@ -29,7 +29,7 @@ export const RootNode = ({ node }) => {
           fontSize={9}
           fontFamily='Arial'
           textAnchor='left'
-          style={{ backgroundColor: "#dd0000", color: "white" }}
+          style={{ backgroundColor: "#dd0000", color: "white", fontSize: "14px" }}
         >
           {node.data.name}
         </text>

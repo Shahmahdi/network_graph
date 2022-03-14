@@ -28,8 +28,10 @@ export const ParentNode = ({ node }) => {
         fontSize={9}
         x={centerX}
         y={centerY}
-        width='80'
-        height='100%'>
+        width='100%'
+        height='100%'
+        style={{ zIndex:"9999" }}
+      >
         {/* <defs>
           <filter x='0' y='0' width='1' height='1' id={`solid_${node.data.id}`}>
             <feFlood floodColor={getBgColor()} result='bg' />
@@ -45,7 +47,7 @@ export const ParentNode = ({ node }) => {
           fontSize={9}
           fontFamily='Arial'
           textAnchor='left'
-          style={{ backgroundColor: getBgColor() }}
+          style={{ backgroundColor: getBgColor(), fontSize: "14px", zIndex:"9999" }}
         >
           {node.data.name}
         </text>

@@ -40,7 +40,7 @@ export const Node = ({ node }) => {
           fontSize={9}
           x={centerX}
           y={centerY}
-          width='80'
+          width='100%'
           height='100%'>
           {/* <defs>
             <filter
@@ -62,7 +62,7 @@ export const Node = ({ node }) => {
             fontSize={9}
             fontFamily='Arial'
             textAnchor='left'
-            style={{ backgroundColor: getBgColor(), wordBreak: "break-word" }}>
+            style={{ backgroundColor: getBgColor(), wordBreak: "break-word", fontSize: "14px" }}>
             {node.data.name}
           </text>
         </foreignObject>

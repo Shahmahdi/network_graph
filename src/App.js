@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 // import GraphReactD3 from "./components/graph-react-d3";
 import { NetworkTree } from "./components/visx-tree/Index";
 import { manupulateBoxTree } from "./components/visx-tree/helpers/manupulateTree";
 import { Tabs, Tab, Box } from "@mui/material";
-import { cafeData } from "./components/visx-tree/Data";
+import { cafeData, CafeDataTree } from "./components/visx-tree/Data";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -30,6 +30,12 @@ function a11yProps(index) {
 
 function App() {
   const [value, setValue] = React.useState(0);
+  const [totalNode, setTotalNode] = useState(0);
+
+  useEffect(() => {
+    const totalNodes = CafeDataTree.length;
+    setTotalNode(totalNodes);
+  }, []);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -43,11 +49,12 @@ function App() {
         <Tab label='Auto' {...a11yProps(1)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <NetworkTree width={2000} height={2000} networkData={cafeData} />
+        <NetworkTree width={2000} height={2500} networkData={cafeData} />
+        {/* <NetworkTree width={48*50*0.7} height={48*50} networkData={cafeData} /> */}
       </TabPanel>
       <TabPanel value={value} index={1}>
         {manupulateBoxTree().map((tree, i) => (
-          <NetworkTree key={i} width={400} height={400} networkData={tree} />
+          <NetworkTree key={i} width={totalNode*100} height={totalNode*100} networkData={tree} />
         ))}
       </TabPanel>
     </div>

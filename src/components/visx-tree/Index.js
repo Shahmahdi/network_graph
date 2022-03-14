@@ -27,14 +27,14 @@ export const NetworkTree = ({ width, height, margin = defaultMargin, networkData
   const yMax = height - margin.top - margin.bottom;
   const xMax = width - margin.left - margin.right;
 
-  const initialTransform = {
-    scaleX: 1.27,
-    scaleY: 1.27,
-    translateX: -211.62,
-    translateY: 162.59,
-    skewX: 0,
-    skewY: 0
-  };
+  // const initialTransform = {
+  //   scaleX: 1.27,
+  //   scaleY: 1.27,
+  //   translateX: -211.62,
+  //   translateY: 162.59,
+  //   skewX: 0,
+  //   skewY: 0
+  // };
 
   const linkTextColor = (link) => {
     if (link.target.data.cableType === cableTypes.fiber) {
@@ -69,7 +69,7 @@ export const NetworkTree = ({ width, height, margin = defaultMargin, networkData
         scaleXMax={4}
         scaleYMin={1 / 4}
         scaleYMax={4}
-        initialTransformMatrix={initialTransform}
+        // initialTransformMatrix={initialTransform}
         component="div"
       >
         {(zoom) => (
