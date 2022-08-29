@@ -43,8 +43,7 @@ export const fiberConnectionUpMediums = {
 
 export const fiberConnectionUpMediumColors = {
   mc: "blue",
-  onu: "black",
-  cat5: "red"
+  onu: "black"
 };
 
 export const rawData = {

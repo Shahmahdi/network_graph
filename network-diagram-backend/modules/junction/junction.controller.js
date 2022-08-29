@@ -255,51 +255,6 @@ const updateJunction = async (ctx) => {
   }
 };
 
-// const updateJunctionAddress = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-
-// const updateJunctionStatus = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-
-// const updateJunctionType = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-// const updateUplinkJunction = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-// const updateElectricSource = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-// const updateUninstallDate = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-// const updateNote = async (ctx) => {
-//   try {
-//   } catch (error) {
-//     errorResponseHandler(ctx, error);
-//   }
-// };
-
 const deleteJunction = async (ctx) => {
   try {
     const id = ctx.params;

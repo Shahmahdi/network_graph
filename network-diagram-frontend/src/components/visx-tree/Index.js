@@ -54,7 +54,8 @@ export const NetworkTree = ({ width, height, margin = defaultMargin, networkData
       link.target.data.cableType === cableTypes.cat5 ||
       link.target.data.cableType === cableTypes.cat4
     ) {
-      return fiberConnectionUpMediumColors.cat5;
+      // return fiberConnectionUpMediumColors.cat5;
+      return "red";
     } else {
       return "black";
     }
